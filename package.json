@@ -1,11 +1,11 @@
 {
-  "name": "video-player",
-  "version": "0.0.0",
-  "description": "Webcomponent video-player following open-wc recommendations",
-  "author": "video-player",
-  "license": "MIT",
+  "name": "@internetarchive/lit-jwplayer",
+  "version": "0.0.1-alpha.1",
+  "description": "A LitElement wrapper for JWPlayer",
+  "license": "AGPL-3.0-only",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "tsc",
