@@ -1,1 +1,1 @@
-export { VideoPlayer } from './src/VideoPlayer.js';
+export { LitJWPlayer } from './src/lit-jwplayer.js';
