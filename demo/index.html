@@ -6,6 +6,11 @@
     body {
       background: #fafafa;
     }
+
+    lit-jwplayer {
+      width: 500px;
+      height: 400px;
+    }
   </style>
 </head>
 <body>
@@ -13,14 +18,23 @@
 
   <script type="module">
     import { html, render } from 'lit-html';
-    import '../dist/video-player.js';
+      import '../dist/demo/app-root.js';
+      import '../dist/src/lit-jwplayer.js';
 
-    const title = 'Hello owc World!';
     render(
       html`
-        <video-player .title=${title}>
-          some more light-dom
-        </video-player>
+        <app-root>
+          <div slot="video-player">
+            <lit-jwplayer
+              jwPlayerScriptUrl="/demo/jwplayer/jwplayer.js"
+              playlistUrl="https://cdn.jwplayer.com/v2/media/hWF9vG66">
+            </lit-jwplayer>
+            <lit-jwplayer
+              jwPlayerScriptUrl="/demo/jwplayer/jwplayer.js"
+              fileUrl="https://archive.org/download/Popeye_forPresident/Popeye_forPresident_512kb.mp4">
+            </lit-jwplayer>
+          </div>
+        </app-root>
       `,
       document.querySelector('#demo')
     );
